@@ -30,6 +30,10 @@ public class VendingMachine {
                 this.coin_box += 10;
                 this.current_coins += 10;
                 break;
+            case QUARTER:
+                this.coin_box += 25;
+                this.current_coins += 25;
+                break;
         };
     }
 }

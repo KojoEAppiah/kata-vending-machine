@@ -19,4 +19,11 @@ public class VendingMachineTest {
         assertEquals(10, vending_machine.getCoinBox());
     }
 
+    @Test
+    public void WhenAQuarterIsInsertedIntoTheVendingMachineItAddsTwentyFiveCentsToItsCoinBox(){
+
+        VendingMachine vending_machine = new VendingMachine();
+        vending_machine.addCoin(VendingMachine.Coin.QUARTER);
+        assertEquals(25, vending_machine.getCoinBox());
+    }
 }
