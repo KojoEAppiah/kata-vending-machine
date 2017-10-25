@@ -2,8 +2,9 @@ public class VendingMachine {
 
     final double COLAPRICE, CHIPPRICE, CANDYPRICE;
 
-    private int coin_box;
-    private int current_coins;
+    private double coin_box;
+    private double coin_return;
+    private double current_coins;
     private int cola_count;
     private int chip_count;
     private int candy_count;
@@ -20,11 +21,13 @@ public class VendingMachine {
         this.CHIPPRICE = 0.50;
         this.CANDYPRICE = 0.60;
 
-        this.coin_box = 0;
-        this.current_coins = 0;
-        this.cola_count = 5;
-        this.chip_count = 5;
-        this.candy_count = 5;
+        this.coin_box = 0.00;
+        this.coin_return = 0.00;
+        this.current_coins = 0.00;
+
+        this.cola_count = 0;
+        this.chip_count = 0;
+        this.candy_count = 0;
 
         this.text_display = "INSERT COIN";
     }
@@ -33,11 +36,15 @@ public class VendingMachine {
         return this.text_display;
     }
 
-    public int getCoinBox() {
+    public double getCoinBox() {
         return this.coin_box;
     }
 
-    public int getCurrent_coins() {
+    public double getCoinReturn(){
+        return this.coin_return;
+    }
+
+    public double getCurrentCoins() {
         return this.current_coins;
     }
 
@@ -53,19 +60,31 @@ public class VendingMachine {
         return this.candy_count;
     }
 
+    public int addCola(int colas){
+        this.cola_count += colas;
+        return this.cola_count;
+    }
+
+    public int addChips(int chips){
+        this.chip_count += chips;
+        return this.chip_count;
+    }
+
+    public int addCandy(int candies){
+        this.candy_count += candies;
+        return this.candy_count;
+    }
+
     void addCoin(Coin coin) {
         switch (coin) {
             case NICKEL:
-                this.coin_box += 5;
-                this.current_coins += 5;
+                this.current_coins += 0.05;
                 break;
             case DIME:
-                this.coin_box += 10;
-                this.current_coins += 10;
+                this.current_coins += 0.10;
                 break;
             case QUARTER:
-                this.coin_box += 25;
-                this.current_coins += 25;
+                this.current_coins += 0.25;
                 break;
         }
         ;
@@ -73,11 +92,16 @@ public class VendingMachine {
 
     void selectCola() {
         if (this.cola_count > 0) {
-            if(current_coins > this.COLAPRICE) {
+            if(this.current_coins > this.COLAPRICE) {
                 this.cola_count--;
                 this.text_display = "THANK YOU";
+
+                this.coin_box += this.COLAPRICE;
+                this.coin_return = this.current_coins - this.COLAPRICE;
+                this.current_coins = 0;
             }
-        } else {
+        }
+        else {
             this.text_display = "SOLD OUT";
         }
 
