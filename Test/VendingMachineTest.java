@@ -40,4 +40,15 @@ public class VendingMachineTest {
         assertEquals("SOLD OUT", vending_machine.displayText());
     }
 
+    @Test
+    public void WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensedAndThankYouIsDisplayed(){
+        SetUp();
+        for(int x = 5; x > 0; x++)
+            vending_machine.addCoin(VendingMachine.Coin.QUARTER);
+
+        vending_machine.selectCola();
+        assertEquals(4, vending_machine.getColaCount());
+        assertEquals("THANK YOU", vending_machine.displayText());
+    }
+
 }

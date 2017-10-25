@@ -22,7 +22,7 @@ public class VendingMachine {
 
         this.coin_box = 0;
         this.current_coins = 0;
-        this.cola_count = 0;
+        this.cola_count = 5;
         this.chip_count = 5;
         this.candy_count = 5;
 
@@ -73,7 +73,10 @@ public class VendingMachine {
 
     void selectCola() {
         if (this.cola_count > 0) {
-            this.cola_count--;
+            if(current_coins > this.COLAPRICE) {
+                this.cola_count--;
+                this.text_display = "THANK YOU";
+            }
         } else {
             this.text_display = "SOLD OUT";
         }

@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfac73a6-d601-45bc-a3c9-678de6efbc3e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gik" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/kata-vending-machine/VendingMachine$1.class" afterPath="$PROJECT_DIR$/out/production/kata-vending-machine/VendingMachine$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/kata-vending-machine/VendingMachine$Coin.class" afterPath="$PROJECT_DIR$/out/production/kata-vending-machine/VendingMachine$Coin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/kata-vending-machine/VendingMachine.class" afterPath="$PROJECT_DIR$/out/production/kata-vending-machine/VendingMachine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/kata-vending-machine/VendingMachineTest.class" afterPath="$PROJECT_DIR$/out/test/kata-vending-machine/VendingMachineTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/VendingMachineTest.java" afterPath="$PROJECT_DIR$/Test/VendingMachineTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kata-vending-machine.iml" afterPath="$PROJECT_DIR$/kata-vending-machine.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VendingMachine.java" afterPath="$PROJECT_DIR$/src/VendingMachine.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/src/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="373">
-              <caret line="75" column="30" lean-forward="false" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
+              <caret line="78" column="13" lean-forward="false" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
               <folding>
                 <element signature="e#675#676#0" expanded="true" />
                 <element signature="e#715#716#0" expanded="true" />
@@ -48,8 +41,8 @@
       <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="35" column="7" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+            <state relative-caret-position="394">
+              <caret line="52" column="4" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#228#229#0" expanded="true" />
@@ -80,8 +73,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Coin.java" />
-        <option value="$PROJECT_DIR$/Test/VendingMachineTest.java" />
         <option value="$PROJECT_DIR$/src/VendingMachine.java" />
+        <option value="$PROJECT_DIR$/Test/VendingMachineTest.java" />
       </list>
     </option>
   </component>
@@ -153,7 +146,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed">
+  <component name="RunManager" selected="JUnit.VendingMachineTest.WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensedAndThankYouIsDisplayed">
     <configuration name="VendingMachineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="kata-vending-machine" />
@@ -163,26 +156,6 @@
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="VendingMachineTest.MakesProperChange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="kata-vending-machine" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="MakesProperChange" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -214,14 +187,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendingMachineTest.WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="kata-vending-machine" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" />
+      <option name="METHOD_NAME" value="WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensed" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -234,14 +207,34 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="VendingMachineTest.WhenSelectedOneColaIsRemovedFromTheVendingMachine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendingMachineTest.WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensedAndThankYouIsDisplayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="kata-vending-machine" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="WhenSelectedOneColaIsRemovedFromTheVendingMachine" />
+      <option name="METHOD_NAME" value="WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensedAndThankYouIsDisplayed" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="kata-vending-machine" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
+      <option name="METHOD_NAME" value="WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -336,19 +329,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenSelectedOneColaIsRemovedFromTheVendingMachine" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.MakesProperChange" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.VendingMachineTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.VendingMachineTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensed" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensedAndThankYouIsDisplayed" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.VendingMachineTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenSelectedOneColaIsRemovedFromTheVendingMachine" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.MakesProperChange" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensedAndThankYouIsDisplayed" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensed" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.VendingMachineTest" />
       </list>
     </recent_temporary>
   </component>
@@ -366,17 +359,14 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 29m 45s.xml">
-      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensed - 2017.10.25 at 17h 48m 58s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 30m 25s.xml">
-      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensedAndThankYouIsDisplayed - 2017.10.25 at 17h 50m 08s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensedAndThankYouIsDisplayed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 30m 46s.xml">
-      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 31m 38s.xml">
-      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensedAndThankYouIsDisplayed - 2017.10.25 at 17h 50m 33s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensedAndThankYouIsDisplayed" configurationId="JUnit" />
     </history-entry>
     <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 31m 58s.xml">
       <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
@@ -394,6 +384,9 @@
       <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
     </history-entry>
     <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 44m 31s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 44m 54s.xml">
       <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -462,7 +455,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -494,7 +487,7 @@
     <entry file="file://$PROJECT_DIR$/src/VendingMachine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
-          <caret line="75" column="30" lean-forward="false" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
+          <caret line="78" column="13" lean-forward="false" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
           <folding>
             <element signature="e#675#676#0" expanded="true" />
             <element signature="e#715#716#0" expanded="true" />
@@ -514,8 +507,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="35" column="7" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        <state relative-caret-position="394">
+          <caret line="52" column="4" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#228#229#0" expanded="true" />
