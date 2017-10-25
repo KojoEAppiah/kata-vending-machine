@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfac73a6-d601-45bc-a3c9-678de6efbc3e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gik" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/kata-vending-machine/VendingMachine$1.class" afterPath="$PROJECT_DIR$/out/production/kata-vending-machine/VendingMachine$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/kata-vending-machine/VendingMachine$Coin.class" afterPath="$PROJECT_DIR$/out/production/kata-vending-machine/VendingMachine$Coin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/kata-vending-machine/VendingMachine.class" afterPath="$PROJECT_DIR$/out/production/kata-vending-machine/VendingMachine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/kata-vending-machine/VendingMachineTest.class" afterPath="$PROJECT_DIR$/out/test/kata-vending-machine/VendingMachineTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/VendingMachineTest.java" afterPath="$PROJECT_DIR$/Test/VendingMachineTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kata-vending-machine.iml" afterPath="$PROJECT_DIR$/kata-vending-machine.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VendingMachine.java" afterPath="$PROJECT_DIR$/src/VendingMachine.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,13 +25,21 @@
       <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+            <state relative-caret-position="373">
+              <caret line="75" column="30" lean-forward="false" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
               <folding>
-                <element signature="e#269#270#0" expanded="true" />
-                <element signature="e#305#306#0" expanded="true" />
-                <element signature="e#341#342#0" expanded="true" />
-                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#675#676#0" expanded="true" />
+                <element signature="e#715#716#0" expanded="true" />
+                <element signature="e#746#747#0" expanded="true" />
+                <element signature="e#782#783#0" expanded="true" />
+                <element signature="e#819#820#0" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+                <element signature="e#893#894#0" expanded="true" />
+                <element signature="e#931#932#0" expanded="true" />
+                <element signature="e#964#965#0" expanded="true" />
+                <element signature="e#1002#1003#0" expanded="true" />
+                <element signature="e#1036#1037#0" expanded="true" />
+                <element signature="e#1075#1076#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -33,10 +48,12 @@
       <file leaf-file-name="VendingMachineTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+            <state relative-caret-position="357">
+              <caret line="35" column="7" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#228#229#0" expanded="true" />
+                <element signature="e#282#283#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,10 +86,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="990" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -123,6 +139,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Kojo/IdeaProjects/kata-vending-machine/src/VendingMachine.java" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -136,15 +153,35 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android JUnit.VendingMachineTest.WhenAQuarterIsInsertedIntoTheVendingMachineItAddsTwentyFiveCentsToItsCoinBox">
-    <configuration name="VendingMachineTest.WhenADimeIsInsertedIntoTheVendingMachineItAddsTenCentsToItsCoinBox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed">
+    <configuration name="VendingMachineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="kata-vending-machine" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="WhenADimeIsInsertedIntoTheVendingMachineItAddsTenCentsToItsCoinBox" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="VendingMachineTest.MakesProperChange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="kata-vending-machine" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
+      <option name="METHOD_NAME" value="MakesProperChange" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -157,7 +194,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="kata-vending-machine" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -166,9 +203,9 @@
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
       <option name="METHOD_NAME" value="WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -177,18 +214,38 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="VendingMachineTest.WhenAQuarterIsInsertedIntoTheVendingMachineItAddsTwentyFiveCentsToItsCoinBox" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="kata-vending-machine" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
-      <option name="METHOD_NAME" value="WhenAQuarterIsInsertedIntoTheVendingMachineItAddsTwentyFiveCentsToItsCoinBox" />
+      <option name="METHOD_NAME" value="WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="VendingMachineTest.WhenSelectedOneColaIsRemovedFromTheVendingMachine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="kata-vending-machine" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="VendingMachineTest" />
+      <option name="METHOD_NAME" value="WhenSelectedOneColaIsRemovedFromTheVendingMachine" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -278,16 +335,20 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Android JUnit.VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenADimeIsInsertedIntoTheVendingMachineItAddsTenCentsToItsCoinBox" />
-      <item index="2" class="java.lang.String" itemvalue="Android JUnit.VendingMachineTest.WhenAQuarterIsInsertedIntoTheVendingMachineItAddsTwentyFiveCentsToItsCoinBox" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenSelectedOneColaIsRemovedFromTheVendingMachine" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.MakesProperChange" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.VendingMachineTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Android JUnit.VendingMachineTest.WhenAQuarterIsInsertedIntoTheVendingMachineItAddsTwentyFiveCentsToItsCoinBox" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenADimeIsInsertedIntoTheVendingMachineItAddsTenCentsToItsCoinBox" />
-        <item index="2" class="java.lang.String" itemvalue="Android JUnit.VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.VendingMachineTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.WhenSelectedOneColaIsRemovedFromTheVendingMachine" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.VendingMachineTest.MakesProperChange" />
       </list>
     </recent_temporary>
   </component>
@@ -305,52 +366,52 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VendingMachineTest_WhenADimeIsInsertedIntoTheVendingMachineItAddsTenCentsToItsCoinBox - 2017.10.24 at 14h 58m 14s.xml">
-      <configuration name="VendingMachineTest.WhenADimeIsInsertedIntoTheVendingMachineItAddsTenCentsToItsCoinBox" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 29m 45s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_WhenADimeIsInsertedIntoTheVendingMachineItAddsTenCentsToItsCoinBox - 2017.10.24 at 15h 01m 18s.xml">
-      <configuration name="VendingMachineTest.WhenADimeIsInsertedIntoTheVendingMachineItAddsTenCentsToItsCoinBox" configurationId="JUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 30m 25s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox - 2017.10.24 at 14h 17m 55s.xml">
-      <configuration name="VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" configurationId="AndroidJUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 30m 46s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox - 2017.10.24 at 14h 18m 03s.xml">
-      <configuration name="VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" configurationId="AndroidJUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 31m 38s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox - 2017.10.24 at 14h 46m 17s.xml">
-      <configuration name="VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" configurationId="AndroidJUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 31m 58s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox - 2017.10.24 at 14h 48m 54s.xml">
-      <configuration name="VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" configurationId="AndroidJUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 32m 37s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox - 2017.10.24 at 14h 56m 54s.xml">
-      <configuration name="VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" configurationId="AndroidJUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 33m 27s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox - 2017.10.24 at 14h 57m 08s.xml">
-      <configuration name="VendingMachineTest.WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox" configurationId="AndroidJUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 34m 34s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_WhenAQuarterIsInsertedIntoTheVendingMachineItAddsTwentyFiveCentsToItsCoinBox - 2017.10.24 at 15h 00m 43s.xml">
-      <configuration name="VendingMachineTest.WhenAQuarterIsInsertedIntoTheVendingMachineItAddsTwentyFiveCentsToItsCoinBox" configurationId="AndroidJUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 44m 19s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_WhenAQuarterIsInsertedIntoTheVendingMachineItAddsTwentyFiveCentsToItsCoinBox - 2017.10.24 at 15h 02m 32s.xml">
-      <configuration name="VendingMachineTest.WhenAQuarterIsInsertedIntoTheVendingMachineItAddsTwentyFiveCentsToItsCoinBox" configurationId="AndroidJUnit" />
+    <history-entry file="VendingMachineTest_WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed - 2017.10.25 at 17h 44m 31s.xml">
+      <configuration name="VendingMachineTest.WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.48333332" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286638" sideWeight="0.48333332" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5104167" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.49166667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286638" sideWeight="0.49166667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.48958334" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32327586" sideWeight="0.48958334" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -367,12 +428,42 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5104167" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4276316" sideWeight="0.9010417" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.48333332" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.49166667" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.48958334" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="8" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -392,25 +483,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/this.COLAPRICE)">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/VendingMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        <state relative-caret-position="373">
+          <caret line="75" column="30" lean-forward="false" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
           <folding>
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#931#932#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1036#1037#0" expanded="true" />
+            <element signature="e#1075#1076#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        <state relative-caret-position="357">
+          <caret line="35" column="7" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
           </folding>
         </state>
       </provider>

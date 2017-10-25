@@ -1,29 +1,43 @@
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VendingMachineTest {
 
+    VendingMachine vending_machine;
+    @Before
+    public void SetUp(){
+        vending_machine = new VendingMachine();
+    }
+
     @Test
     public void WhenANickelIsInsertedIntoTheVendingMachineItAddSFiveCentsToItsCoinBox(){
-
-        VendingMachine vending_machine = new VendingMachine();
+        SetUp();
         vending_machine.addCoin(VendingMachine.Coin.NICKEL);
         assertEquals(5, vending_machine.getCoinBox());
     }
 
     @Test
     public void WhenADimeIsInsertedIntoTheVendingMachineItAddsTenCentsToItsCoinBox(){
-
-        VendingMachine vending_machine = new VendingMachine();
+        SetUp();
         vending_machine.addCoin(VendingMachine.Coin.DIME);
         assertEquals(10, vending_machine.getCoinBox());
     }
 
     @Test
     public void WhenAQuarterIsInsertedIntoTheVendingMachineItAddsTwentyFiveCentsToItsCoinBox(){
-
-        VendingMachine vending_machine = new VendingMachine();
+        SetUp();
         vending_machine.addCoin(VendingMachine.Coin.QUARTER);
         assertEquals(25, vending_machine.getCoinBox());
     }
+
+    @Test
+    public void WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed(){
+        SetUp();
+        for(int x = vending_machine.getColaCount(); x > 0; x--)
+            vending_machine.selectCola();
+        vending_machine.selectCola();
+        assertEquals("SOLD OUT", vending_machine.displayText());
+    }
+
 }
