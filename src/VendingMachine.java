@@ -90,7 +90,13 @@ public class VendingMachine {
         ;
     }
 
-    void selectCola() {
+    public double returnCoins(){
+        this.coin_return += this.current_coins;
+        this.current_coins = 0;
+        return this.coin_return;
+    }
+
+    public void selectCola() {
         if (this.cola_count > 0) {
             if(this.current_coins > this.COLAPRICE) {
                 this.cola_count--;

@@ -61,6 +61,15 @@ public class VendingMachineTest {
         vending_machine.addCola(1);
         vending_machine.selectCola();
         assertEquals(0.25, vending_machine.getCoinReturn());
+    }
 
+    @Test
+    public void WhenReturnCoinsButtonIsPressedCurrentCoinsAreMovedToTheCoinReturn(){
+        SetUp();
+
+        vending_machine.addCoin(VendingMachine.Coin.QUARTER);
+        vending_machine.returnCoins();
+
+        assertEquals(0.25, vending_machine.getCoinReturn());
     }
 }
