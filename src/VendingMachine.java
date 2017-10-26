@@ -32,7 +32,7 @@ public class VendingMachine {
         this.text_display = "INSERT COIN";
     }
 
-    public String displayText(){
+    public String getTextDisplay(){
         return this.text_display;
     }
 
@@ -86,8 +86,9 @@ public class VendingMachine {
             case QUARTER:
                 this.current_coins += 0.25;
                 break;
-        }
-        ;
+        };
+
+        this.text_display = String.valueOf(this.current_coins);
     }
 
     public double returnCoins(){
@@ -105,6 +106,21 @@ public class VendingMachine {
                 this.coin_box += this.COLAPRICE;
                 this.coin_return = this.current_coins - this.COLAPRICE;
                 this.current_coins = 0;
+            }
+            else {
+
+                if(this.current_coins > 0) {
+                    if (this.text_display.equals("PRICE " + this.COLAPRICE))
+                        this.text_display = String.valueOf(this.current_coins);
+                    else if (this.text_display.equals(String.valueOf(this.current_coins)))
+                        this.text_display = "PRICE " + this.COLAPRICE;
+                }
+                else {
+                    if (this.text_display.equals("INSERT COIN"))
+                        this.text_display = "PRICE " + this.COLAPRICE;
+                    else
+                        this.text_display = "INSERT COIN";
+                }
             }
         }
         else {
