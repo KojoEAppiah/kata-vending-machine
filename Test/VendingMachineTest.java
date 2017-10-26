@@ -94,4 +94,21 @@ public class VendingMachineTest {
 
         assertEquals(0.25, vending_machine.getCoinReturn());
     }
+
+    @Test
+    public void WhenCoinBoxDoesNotContainEnoughMoneyExactChangeMessageIsDisplayed(){
+        SetUp();
+
+        vending_machine.addCola(5);
+        vending_machine.selectCola();
+        vending_machine.selectCola();
+        assertEquals("EXACT CHANGE ONLY", vending_machine.getTextDisplay());
+
+        for(int x = 0; x < 5; x++)
+            vending_machine.addCoin(VendingMachine.Coin.QUARTER);
+
+        vending_machine.selectCola();
+        vending_machine.selectCola();
+        assertEquals("INSERT COIN", vending_machine.getTextDisplay());
+    }
 }

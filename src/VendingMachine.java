@@ -99,6 +99,7 @@ public class VendingMachine {
         return this.coin_return;
     }
 
+
     public void selectCola() {
         if (this.cola_count > 0) {
             if(this.current_coins > this.COLAPRICE) {
@@ -118,10 +119,15 @@ public class VendingMachine {
                         this.text_display = "PRICE " + this.COLAPRICE;
                 }
                 else {
-                    if (this.text_display.equals("INSERT COIN"))
+                    if (this.text_display.equals("INSERT COIN") || this.text_display.equals("EXACT CHANGE ONLY")){
                         this.text_display = "PRICE " + this.COLAPRICE;
-                    else
-                        this.text_display = "INSERT COIN";
+                    }
+                    else {
+                        if (this.coin_box >= this.COLAPRICE)
+                            this.text_display = "INSERT COIN";
+                        else
+                            this.text_display = "EXACT CHANGE ONLY";
+                    }
                 }
             }
         }
@@ -129,8 +135,110 @@ public class VendingMachine {
             if(this.text_display.equals("SOLD OUT")) {
                 if (current_coins > 0)
                     this.text_display = String.valueOf(this.current_coins);
-                else
-                    this.text_display = "INSERT COIN";
+                else {
+                    if (this.coin_box >= this.COLAPRICE)
+                        this.text_display = "INSERT COIN";
+                    else
+                        this.text_display = "EXACT CHANGE ONLY";
+                }
+            }
+            else
+                this.text_display = "SOLD OUT";
+        }
+
+    }
+
+
+    public void selectChips() {
+        if (this.chip_count > 0) {
+            if(this.current_coins > this.CHIPPRICE) {
+                this.chip_count--;
+                this.text_display = "THANK YOU";
+
+                this.coin_box += this.CHIPPRICE;
+                this.coin_return = this.current_coins - this.CHIPPRICE;
+                this.current_coins = 0;
+            }
+            else {
+
+                if(this.current_coins > 0) {
+                    if (this.text_display.equals("PRICE " + this.CHIPPRICE))
+                        this.text_display = String.valueOf(this.current_coins);
+                    else if (this.text_display.equals(String.valueOf(this.current_coins)))
+                        this.text_display = "PRICE " + this.CHIPPRICE;
+                }
+                else {
+                    if (this.text_display.equals("INSERT COIN") || this.text_display.equals("EXACT CHANGE ONLY")){
+                        this.text_display = "PRICE " + this.CHIPPRICE;
+                    }
+                    else {
+                        if (this.coin_box >= this.CHIPPRICE)
+                            this.text_display = "INSERT COIN";
+                        else
+                            this.text_display = "EXACT CHANGE ONLY";
+                    }
+                }
+            }
+        }
+        else {
+            if(this.text_display.equals("SOLD OUT")) {
+                if (current_coins > 0)
+                    this.text_display = String.valueOf(this.current_coins);
+                else {
+                    if (this.coin_box >= this.CHIPPRICE)
+                        this.text_display = "INSERT COIN";
+                    else
+                        this.text_display = "EXACT CHANGE ONLY";
+                }
+            }
+            else
+                this.text_display = "SOLD OUT";
+        }
+
+    }
+
+
+    public void selectCandy() {
+        if (this.candy_count > 0) {
+            if(this.current_coins > this.CANDYPRICE) {
+                this.candy_count--;
+                this.text_display = "THANK YOU";
+
+                this.coin_box += this.CANDYPRICE;
+                this.coin_return = this.current_coins - this.CANDYPRICE;
+                this.current_coins = 0;
+            }
+            else {
+
+                if(this.current_coins > 0) {
+                    if (this.text_display.equals("PRICE " + this.CANDYPRICE))
+                        this.text_display = String.valueOf(this.current_coins);
+                    else if (this.text_display.equals(String.valueOf(this.current_coins)))
+                        this.text_display = "PRICE " + this.CANDYPRICE;
+                }
+                else {
+                    if (this.text_display.equals("INSERT COIN") || this.text_display.equals("EXACT CHANGE ONLY")){
+                        this.text_display = "PRICE " + this.CANDYPRICE;
+                    }
+                    else {
+                        if (this.coin_box >= this.CANDYPRICE)
+                            this.text_display = "INSERT COIN";
+                        else
+                            this.text_display = "EXACT CHANGE ONLY";
+                    }
+                }
+            }
+        }
+        else {
+            if(this.text_display.equals("SOLD OUT")) {
+                if (current_coins > 0)
+                    this.text_display = String.valueOf(this.current_coins);
+                else {
+                    if (this.coin_box >= this.CANDYPRICE)
+                        this.text_display = "INSERT COIN";
+                    else
+                        this.text_display = "EXACT CHANGE ONLY";
+                }
             }
             else
                 this.text_display = "SOLD OUT";
