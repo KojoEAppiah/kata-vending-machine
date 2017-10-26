@@ -32,11 +32,17 @@ public class VendingMachineTest {
     }
 
     @Test
-    public void WhenColaIsSelectedButSoldOutTheSoldOutMessageIsDisplayed(){
+    public void WhenColaIsSelectedButSoldOutTheSoldOutMessageAndInsertCoinAndCurrentCoinsDisplayOneAfterAnother(){
         SetUp();
 
         vending_machine.selectCola();
         assertEquals("SOLD OUT", vending_machine.getTextDisplay());
+        vending_machine.selectCola();
+        assertEquals("INSERT COIN", vending_machine.getTextDisplay());
+        vending_machine.addCoin(VendingMachine.Coin.NICKEL);  //sets display to current_coins
+        vending_machine.selectCola();
+        vending_machine.selectCola();
+        assertEquals("0.05", vending_machine.getTextDisplay());
     }
 
     @Test
@@ -55,16 +61,17 @@ public class VendingMachineTest {
     }
 
     @Test
-    public void WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensedAndThankYouIsDisplayed(){
+    public void WhenColaIsSelectedAndAvailableAndCurrenCoinsIsGreatEnoughColaIsDispensedAndThankYouIsDisplayedFollowedByInsertCoin(){
         SetUp();
         for(int x = 5; x > 0; x--)
             vending_machine.addCoin(VendingMachine.Coin.QUARTER);
 
-        vending_machine.addCola(1);
+        vending_machine.addCola(2);
 
         vending_machine.selectCola();
-        assertEquals(0, vending_machine.getColaCount());
         assertEquals("THANK YOU", vending_machine.getTextDisplay());
+        vending_machine.selectCola();
+        assertEquals("INSERT COIN", vending_machine.getTextDisplay());
     }
 
     @Test

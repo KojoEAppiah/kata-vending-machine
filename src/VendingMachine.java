@@ -86,6 +86,8 @@ public class VendingMachine {
             case QUARTER:
                 this.current_coins += 0.25;
                 break;
+            default:                   //for pennies
+                this.coin_return += 0.01;
         };
 
         this.text_display = String.valueOf(this.current_coins);
@@ -124,7 +126,14 @@ public class VendingMachine {
             }
         }
         else {
-            this.text_display = "SOLD OUT";
+            if(this.text_display.equals("SOLD OUT")) {
+                if (current_coins > 0)
+                    this.text_display = String.valueOf(this.current_coins);
+                else
+                    this.text_display = "INSERT COIN";
+            }
+            else
+                this.text_display = "SOLD OUT";
         }
 
     }
