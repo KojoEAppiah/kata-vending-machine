@@ -125,12 +125,13 @@ public class VendingMachine {
 
     public double returnCoins(){
         this.coin_return_value += this.current_coins_value;
-        this.current_coins_value = 0;
+        this.current_coins_value = current_coins_value;
 
         for(int i = 0; i < 3; i++) {
             this.coin_return_coins[i] = this.current_coins[i];
             this.current_coins[i] = 0;
         }
+        current_coins_value = 0;
         return this.coin_return_value;
     }
 
@@ -165,15 +166,13 @@ public class VendingMachine {
 
                 this.text_display = "THANK YOU";
 
-                makeChange(product_price);
-
-                for(int i = 0; i < 3; i++) {
+                for(int i = 0; i < 3; i++) {  //move coins into the coin box
                     this.coin_box[i] += this.current_coins[i];
                     this.current_coins[i] = 0;
                 }
 
-                this.coin_box_value += product_price;
-                this.coin_return_value += this.current_coins_value - product_price;
+                this.coin_box_value += current_coins_value;
+                makeChange(product_price);
                 this.current_coins_value = 0;
             } else {
 
@@ -221,24 +220,24 @@ public class VendingMachine {
         while(difference > 0) {
 
             if(difference >= 0.25) {
-                this.current_coins[QUARTER]--;
+                this.coin_box[QUARTER]--;
                 this.coin_return_coins[QUARTER]++;
                 difference -= 0.25;
-                this.current_coins_value -= 0.25;
+                this.coin_box_value -= 0.25;
                 this.coin_return_value += 0.25;
             }
             else if(difference >= 0.10) {
-                this.current_coins[DIME]--;
+                this.coin_box[DIME]--;
                 this.coin_return_coins[DIME]++;
                 difference -= 0.10;
-                this.current_coins_value -= 0.10;
+                this.coin_box_value -= 0.10;
                 this.coin_return_value += 0.10;
             }
             else {
-                this.current_coins[NICKEL]--;
+                this.coin_box[NICKEL]--;
                 this.coin_return_coins[NICKEL]++;
                 difference -= 0.05;
-                this.current_coins_value -= 0.05;
+                this.coin_box_value -= 0.05;
                 this.coin_return_value += 0.05;
             }
         }

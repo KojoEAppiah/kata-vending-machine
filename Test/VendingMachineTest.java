@@ -13,17 +13,20 @@ public class VendingMachineTest {
     public void FillCoinBox(){
 
         //put some coins in the coin_box
-        for(int x = 0; x < 6; x++)
+
+        vending_machine.addProduct("chips", 4);
+
+        for(int x = 0; x < 3; x++) {
             vending_machine.addCoin(VendingMachine.Coin.QUARTER);
+            vending_machine.addCoin(VendingMachine.Coin.QUARTER);
+            vending_machine.selectProduct("chips");
+        }
+
         for(int x = 0; x < 4; x++)
             vending_machine.addCoin(VendingMachine.Coin.DIME);
         for(int x = 0; x < 2; x++)
             vending_machine.addCoin(VendingMachine.Coin.NICKEL);
 
-        vending_machine.addProduct("chips", 4);
-        vending_machine.selectProduct("chips");
-        vending_machine.selectProduct("chips");
-        vending_machine.selectProduct("chips");
         vending_machine.selectProduct("chips");
 
     }
@@ -54,14 +57,14 @@ public class VendingMachineTest {
         SetUp();
         FillCoinBox();
 
+        vending_machine.addCoin(VendingMachine.Coin.NICKEL);
+
         vending_machine.selectProduct("Cola");
         assertEquals("SOLD OUT", vending_machine.getTextDisplay());
         vending_machine.selectProduct("cola");
         assertEquals("INSERT COIN", vending_machine.getTextDisplay());
-        vending_machine.addCoin(VendingMachine.Coin.NICKEL);  //sets display to current_coins
-        vending_machine.selectProduct("cola");;
-        vending_machine.selectProduct("cola");;
-        assertEquals("0.05", vending_machine.getTextDisplay());
+        vending_machine.selectProduct("cola");
+        assertEquals("$0.05", vending_machine.getTextDisplay());
     }
 
     @Test
@@ -69,6 +72,7 @@ public class VendingMachineTest {
         SetUp();
         FillCoinBox();
 
+        vending_machine.addCoin(VendingMachine.Coin.QUARTER);
 
         vending_machine.addProduct("Cola", 3);
         vending_machine.selectProduct("Cola");
@@ -76,9 +80,9 @@ public class VendingMachineTest {
         vending_machine.selectProduct("cola");
         assertEquals("INSERT COIN", vending_machine.getTextDisplay());
         vending_machine.addCoin(VendingMachine.Coin.QUARTER);
-        assertEquals("$0.25", vending_machine.getTextDisplay());
+        assertEquals("$0.50", vending_machine.getTextDisplay());
         vending_machine.selectProduct("cola");
-        assertEquals("PRICE " + vending_machine.COLAPRICE, vending_machine.getTextDisplay());
+        assertEquals("PRICE $1.00", vending_machine.getTextDisplay());
     }
 
     @Test
@@ -124,13 +128,13 @@ public class VendingMachineTest {
     @Test
     public void WhenCoinBoxDoesNotContainEnoughMoneyExactChangeMessageIsDisplayed(){
         SetUp();
-        FillCoinBox();
 
         vending_machine.addProduct("Cola", 5);
         vending_machine.selectProduct("cola");
         vending_machine.selectProduct("cola");
         assertEquals("EXACT CHANGE ONLY", vending_machine.getTextDisplay());
 
+        FillCoinBox();
         for(int x = 0; x < 5; x++)
             vending_machine.addCoin(VendingMachine.Coin.QUARTER);
 
