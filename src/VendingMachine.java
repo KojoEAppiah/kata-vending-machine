@@ -1,10 +1,16 @@
+import java.text.DecimalFormat;
+
 public class VendingMachine {
 
     final double COLAPRICE, CHIPPRICE, CANDYPRICE;
+    final int NICKEL, DIME, QUARTER;
 
-    private double coin_box;
-    private double coin_return;
-    private double current_coins;
+    private int coin_box[];
+    private double coin_box_value;
+    private int coin_return_coins[];
+    private double coin_return_value;
+    private int current_coins[];
+    private double current_coins_value;
     private int cola_count;
     private int chip_count;
     private int candy_count;
@@ -21,9 +27,24 @@ public class VendingMachine {
         this.CHIPPRICE = 0.50;
         this.CANDYPRICE = 0.60;
 
-        this.coin_box = 0.00;
-        this.coin_return = 0.00;
-        this.current_coins = 0.00;
+        this.NICKEL = 0;
+        this.DIME = 1;
+        this.QUARTER = 2;
+
+        this.coin_box = new int[3];
+        this.coin_box_value = 0.00;
+        for(int i = 0; i < 3; i++)
+            this.coin_box[i] = 0;
+
+        this.current_coins = new int[3];
+        this.current_coins_value = 0.00;
+        for(int i = 0; i < 3; i++)
+            this.current_coins[i] = 0;
+
+        this.coin_return_coins = new int[3];
+        this.coin_return_value = 0.00;
+        for(int i = 0; i < 3; i++)
+            this.coin_return_coins[i] = 0;
 
         this.cola_count = 0;
         this.chip_count = 0;
@@ -37,15 +58,15 @@ public class VendingMachine {
     }
 
     public double getCoinBox() {
-        return this.coin_box;
+        return this.coin_box_value;
     }
 
     public double getCoinReturn(){
-        return this.coin_return;
+        return this.coin_return_value;
     }
 
     public double getCurrentCoins() {
-        return this.current_coins;
+        return this.current_coins_value;
     }
 
     public int getColaCount() {
@@ -60,70 +81,114 @@ public class VendingMachine {
         return this.candy_count;
     }
 
-    public int addCola(int colas){
-        this.cola_count += colas;
-        return this.cola_count;
-    }
+    public int addProduct(String product, int ammount){
 
-    public int addChips(int chips){
-        this.chip_count += chips;
-        return this.chip_count;
-    }
+        switch(product.toLowerCase()){
 
-    public int addCandy(int candies){
-        this.candy_count += candies;
-        return this.candy_count;
+            case "cola":
+                cola_count += ammount;
+                return cola_count;
+
+            case "chips":
+                chip_count += ammount;
+                return chip_count;
+
+            case "candy":
+                candy_count += ammount;
+                return candy_count;
+        }
+
+        return 0;
     }
 
     void addCoin(Coin coin) {
         switch (coin) {
             case NICKEL:
-                this.current_coins += 0.05;
+                this.current_coins_value += 0.05;
+                this.current_coins[this.NICKEL]++;
                 break;
             case DIME:
-                this.current_coins += 0.10;
+                this.current_coins_value += 0.10;
+                this.current_coins[this.DIME]++;
                 break;
             case QUARTER:
-                this.current_coins += 0.25;
+                this.current_coins_value += 0.25;
+                this.current_coins[this.QUARTER]++;
                 break;
-            default:                   //for pennies
-                this.coin_return += 0.01;
+            default:                   //for pennies - straight to the coin return
+                this.coin_return_value += 0.01;
         };
 
-        this.text_display = String.valueOf(this.current_coins);
+        DecimalFormat formatter = new DecimalFormat("$0.00");
+        this.text_display = formatter.format(this.current_coins_value);
     }
 
     public double returnCoins(){
-        this.coin_return += this.current_coins;
-        this.current_coins = 0;
-        return this.coin_return;
+        this.coin_return_value += this.current_coins_value;
+        this.current_coins_value = 0;
+
+        for(int i = 0; i < 3; i++) {
+            this.coin_return_coins[i] = this.current_coins[i];
+            this.current_coins[i] = 0;
+        }
+        return this.coin_return_value;
     }
 
 
-    public void selectCola() {
-        if (this.cola_count > 0) {
-            if(this.current_coins > this.COLAPRICE) {
-                this.cola_count--;
+    public void selectProduct(String product) {
+
+        double product_price = 0.00;
+        int count = 0;
+
+        DecimalFormat formatter = new DecimalFormat("$0.00");
+
+        switch(product.toLowerCase()){
+
+            case "cola":
+                product_price = this.COLAPRICE;
+                count = cola_count;
+                break;
+
+            case "chips":
+                product_price = this.CHIPPRICE;
+                count = chip_count;
+                break;
+
+            case "candy":
+                product_price = this.CANDYPRICE;
+                count = candy_count;
+                break;
+        }
+
+        if (count > 0) {
+            if (this.current_coins_value >= product_price) {
+
                 this.text_display = "THANK YOU";
 
-                this.coin_box += this.COLAPRICE;
-                this.coin_return = this.current_coins - this.COLAPRICE;
-                this.current_coins = 0;
-            }
-            else {
+                makeChange(product_price);
 
-                if(this.current_coins > 0) {
-                    if (this.text_display.equals("PRICE " + this.COLAPRICE))
-                        this.text_display = String.valueOf(this.current_coins);
-                    else if (this.text_display.equals(String.valueOf(this.current_coins)))
-                        this.text_display = "PRICE " + this.COLAPRICE;
+                for(int i = 0; i < 3; i++) {
+                    this.coin_box[i] += this.current_coins[i];
+                    this.current_coins[i] = 0;
                 }
-                else {
-                    if (this.text_display.equals("INSERT COIN") || this.text_display.equals("EXACT CHANGE ONLY")){
-                        this.text_display = "PRICE " + this.COLAPRICE;
+
+                this.coin_box_value += product_price;
+                this.coin_return_value += this.current_coins_value - product_price;
+                this.current_coins_value = 0;
+            } else {
+
+                if (this.current_coins_value > 0) {
+
+                    if (this.text_display.equals("PRICE " + formatter.format(product_price)))
+                        this.text_display = "INSERT COIN";
+                    else if (this.text_display.equals(formatter.format(this.current_coins_value))) {
+                        this.text_display = "PRICE " + formatter.format(product_price);
                     }
+                } else {
+                    if (this.text_display.equals("INSERT COIN") || this.text_display.equals("EXACT CHANGE ONLY"))
+                        this.text_display = "PRICE " + formatter.format(product_price);
                     else {
-                        if (this.coin_box >= this.COLAPRICE)
+                        if (canMakeChange())
                             this.text_display = "INSERT COIN";
                         else
                             this.text_display = "EXACT CHANGE ONLY";
@@ -131,119 +196,60 @@ public class VendingMachine {
                 }
             }
         }
+
         else {
             if(this.text_display.equals("SOLD OUT")) {
-                if (current_coins > 0)
-                    this.text_display = String.valueOf(this.current_coins);
-                else {
-                    if (this.coin_box >= this.COLAPRICE)
-                        this.text_display = "INSERT COIN";
-                    else
-                        this.text_display = "EXACT CHANGE ONLY";
-                }
+
+                if (canMakeChange())
+                    this.text_display = "INSERT COIN";
+                else
+                    this.text_display = "EXACT CHANGE ONLY";
             }
+            else if(this.text_display.equals("INSERT COIN"))
+                this.text_display = formatter.format(this.current_coins_value);
             else
                 this.text_display = "SOLD OUT";
         }
 
     }
 
+    public void makeChange(double price) {
 
-    public void selectChips() {
-        if (this.chip_count > 0) {
-            if(this.current_coins > this.CHIPPRICE) {
-                this.chip_count--;
-                this.text_display = "THANK YOU";
+        int value = 0;
+        double difference = this.current_coins_value - price;
 
-                this.coin_box += this.CHIPPRICE;
-                this.coin_return = this.current_coins - this.CHIPPRICE;
-                this.current_coins = 0;
+        while(difference > 0) {
+
+            if(difference >= 0.25) {
+                this.current_coins[QUARTER]--;
+                this.coin_return_coins[QUARTER]++;
+                difference -= 0.25;
+                this.current_coins_value -= 0.25;
+                this.coin_return_value += 0.25;
+            }
+            else if(difference >= 0.10) {
+                this.current_coins[DIME]--;
+                this.coin_return_coins[DIME]++;
+                difference -= 0.10;
+                this.current_coins_value -= 0.10;
+                this.coin_return_value += 0.10;
             }
             else {
-
-                if(this.current_coins > 0) {
-                    if (this.text_display.equals("PRICE " + this.CHIPPRICE))
-                        this.text_display = String.valueOf(this.current_coins);
-                    else if (this.text_display.equals(String.valueOf(this.current_coins)))
-                        this.text_display = "PRICE " + this.CHIPPRICE;
-                }
-                else {
-                    if (this.text_display.equals("INSERT COIN") || this.text_display.equals("EXACT CHANGE ONLY")){
-                        this.text_display = "PRICE " + this.CHIPPRICE;
-                    }
-                    else {
-                        if (this.coin_box >= this.CHIPPRICE)
-                            this.text_display = "INSERT COIN";
-                        else
-                            this.text_display = "EXACT CHANGE ONLY";
-                    }
-                }
+                this.current_coins[NICKEL]--;
+                this.coin_return_coins[NICKEL]++;
+                difference -= 0.05;
+                this.current_coins_value -= 0.05;
+                this.coin_return_value += 0.05;
             }
         }
-        else {
-            if(this.text_display.equals("SOLD OUT")) {
-                if (current_coins > 0)
-                    this.text_display = String.valueOf(this.current_coins);
-                else {
-                    if (this.coin_box >= this.CHIPPRICE)
-                        this.text_display = "INSERT COIN";
-                    else
-                        this.text_display = "EXACT CHANGE ONLY";
-                }
-            }
-            else
-                this.text_display = "SOLD OUT";
-        }
-
     }
 
 
-    public void selectCandy() {
-        if (this.candy_count > 0) {
-            if(this.current_coins > this.CANDYPRICE) {
-                this.candy_count--;
-                this.text_display = "THANK YOU";
+    public boolean canMakeChange(){
 
-                this.coin_box += this.CANDYPRICE;
-                this.coin_return = this.current_coins - this.CANDYPRICE;
-                this.current_coins = 0;
-            }
-            else {
+        if(this.coin_box[QUARTER] >= 3 && this.coin_box[DIME] >= 2 && this.coin_box[NICKEL] > 0)
+            return true;
 
-                if(this.current_coins > 0) {
-                    if (this.text_display.equals("PRICE " + this.CANDYPRICE))
-                        this.text_display = String.valueOf(this.current_coins);
-                    else if (this.text_display.equals(String.valueOf(this.current_coins)))
-                        this.text_display = "PRICE " + this.CANDYPRICE;
-                }
-                else {
-                    if (this.text_display.equals("INSERT COIN") || this.text_display.equals("EXACT CHANGE ONLY")){
-                        this.text_display = "PRICE " + this.CANDYPRICE;
-                    }
-                    else {
-                        if (this.coin_box >= this.CANDYPRICE)
-                            this.text_display = "INSERT COIN";
-                        else
-                            this.text_display = "EXACT CHANGE ONLY";
-                    }
-                }
-            }
-        }
-        else {
-            if(this.text_display.equals("SOLD OUT")) {
-                if (current_coins > 0)
-                    this.text_display = String.valueOf(this.current_coins);
-                else {
-                    if (this.coin_box >= this.CANDYPRICE)
-                        this.text_display = "INSERT COIN";
-                    else
-                        this.text_display = "EXACT CHANGE ONLY";
-                }
-            }
-            else
-                this.text_display = "SOLD OUT";
-        }
-
+        return false;
     }
-
 }
