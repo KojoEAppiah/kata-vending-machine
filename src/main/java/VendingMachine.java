@@ -257,7 +257,7 @@ public class VendingMachine {
 
     public boolean canMakeChange(){
 
-        if(this.coin_box[QUARTER] >= 3 && this.coin_box[DIME] >= 2 && this.coin_box[NICKEL] > 0)
+        if(this.coin_box[QUARTER] >= 2 && this.coin_box[DIME] >= 4 && this.coin_box[NICKEL] >= 1)
             return true;
 
         return false;
